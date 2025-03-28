@@ -1,0 +1,77 @@
+<app-header></app-header>
+<div style="height: 400px;" class="text-light container bg-nav p-5 d-flex align-items-center flex-column">
+<h1 >Contact Us</h1>
+<p class="mt-5 w-75">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et corporis alias eveniet facilis dolores, recusandae dolorum corrupti nostrum molestias officia quidem reiciendis ex id odit tenetur veritatis quos, dolor animi?</p>
+</div>
+
+<div class=" container my-5">
+<div class="row">
+        <div class="col-md-6">
+            <h2>Get in touch</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam minima deserunt quis, esse accusantium nulla dicta, in nemo blanditiis sequi deleniti, animi possimus harum magnam delectus fuga corporis velit aut.</p>
+            <div class="d-flex flex-column gap-3">
+                <div class="d-flex gap-1 ">
+                    <button class="btn bg-nav rounded-circle"><i class="fa-solid fa-location-crosshairs" style="color: #ffffff;"></i></button>
+                    <div class="ms-2">
+                        <h6 class="m-0 p-0">Address</h6>
+                        <p class="m-0 p-0">NYC 4667, PO Berlin</p>
+                    </div>
+
+                </div>
+                <div class="d-flex gap-1 ">
+                    <button class="btn bg-nav rounded-circle"><i class="fa-solid fa-phone" style="color: #ffffff;"></i></button>
+                    <div class="ms-2">
+                        <h6 class="m-0 p-0">Phone</h6>
+                        <p class="m-0 p-0">893094994</p>
+                    </div>
+
+                </div>
+                <div class="d-flex gap-1 ">
+                    <button class="btn bg-nav rounded-circle"><i class="fa-solid fa-envelope" style="color: #ffffff;"></i></button>
+                    <div class="ms-2">
+                        <h6 class="m-0 p-0">Email</h6>
+                        <p class="m-0 p-0">cookpediagmail.com</p>
+                    </div>
+
+                </div>
+            </div>
+            <hr>
+            <h5>Follow Us</h5>
+           <div class="d-flex gap-3">
+            <a href="" class="btn rounded-circle bg-nav">
+                <i class="fa-brands fa-facebook text-light "></i>
+            </a>
+            <a href="" class="btn rounded-circle bg-nav">
+                <i class="fa-brands fa-instagram text-light "></i>
+            </a>
+            <a href="" class="btn rounded-circle bg-nav">
+                <i class="fa-brands fa-twitter text-light "></i>
+            </a>
+            <a href="" class="btn rounded-circle bg-nav">
+                <i class="fa-brands fa-youtube text-light "></i>
+            </a>
+           </div>
+        </div>
+        <div class="col-md-6">
+            <div class="border p-5 rounded shadow">
+                <h3>Client Testimony</h3>
+                <form [formGroup]="testimonyForm" (ngSubmit)="addTesimony()" >
+                   <div class="mb-2">
+                     <input type="text" formControlName="name" class="form-control" placeholder="Name">
+                    </div>
+                    <div class="mb-2">
+                        <input type="email" formControlName="email"  class="form-control" placeholder="Email">
+                       </div>
+                       <div class="mb-2">
+                       <textarea class="form-control"
+                       formControlName="message"  placeholder="Message"></textarea>
+                       </div>
+                       <p style="font-size: 11px;" class="mb-3 text-secondary">*By submitting you are agreeing the terms and conditions of our website.we may use your details in our site.</p>
+                       <button type="submit" class="btn bg-grn text-light w-100">Submit</button>
+                </form>
+            </div>
+        </div>
+    
+</div>
+</div>
+<app-footer></app-footer>

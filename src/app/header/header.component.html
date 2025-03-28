@@ -1,0 +1,46 @@
+<nav class=" ps-3 container py-3 navbar text-light mt-5 navbar-expand-lg bg-nav">
+    <div class="container">
+      <a class="navbar-brand fs-4 text-light" href=""> <i class="fa-solid fa-pizza-slice fa-rotate-270"></i>
+      Cookpedia</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="text-light nav-link active" aria-current="page" routerLink="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class=" text-light nav-link active" aria-current="page" routerLink="/recipes">Recipe</a>
+          </li>  <li class="nav-item">
+            <a class="text-light nav-link active" aria-current="page" routerLink="/about">About</a>
+          </li>  <li class="nav-item">
+            <a class="text-light nav-link active" aria-current="page" routerLink="/contact">Contact</a>
+          </li> 
+        
+        </ul>
+ <div class="ms-auto me-5 pe-5 dropdown">
+            <button class="btn dropdown-toggle text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+               <i class="fa-solid fa-user text-light fa-lg"></i>
+               @if(isLogedin){
+                <span class="fw-bolder ms-1">Hi {{logedinUsername}}</span>
+
+               }
+              </button>
+            <div class="collapse  shadow border-0 " id="collapseExample">
+                 <ul class="dropdown-menu p-3 mt-3 d-flex flex-column gap-2" id="collapseExample">
+                  @if(isLogedin){
+                    <li><a class="color-light mb-4" routerLink="/profile">Profile</a></li>
+                    <li><a class="color-light" routerLink="/saved/recipies">Saved collection</a></li>
+                    <button class="btn ms-0 ps-0 bg-grn text-light" (click)="logout()">Logout</button>
+                  }
+                  @else { <li><a class="color-light mb-4" routerLink="/login">Login</a></li>
+                    <li><a class="color-light" routerLink="/register">Register</a></li>}
+    
+                 </ul>
+            </div>
+ </div>
+
+      </div>
+    </div>
+  </nav>

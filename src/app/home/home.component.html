@@ -1,0 +1,99 @@
+<app-header></app-header>
+
+
+
+<div >
+    <div class="container bg-nav">
+    
+        <div class="d-flex py-5 px-1 align-items-center gap-5 justify-content-center flex-wrap ">
+            <div> 
+                <h3 class="text-warning ">The Easiest way</h3><h3 class="text-warning "> to make your</h3><h3 class="text-warning"> favorite meal</h3>
+                <p class="text-light">Discover 100+ recipes in your hand with <br> the best recipe .help you to cook</p>
+                <a routerLink="recipes"  class="btn text-light bg-grn" >Explore Recipes</a>
+            </div>
+            <div class="text-center">
+                <img class="w-75"  src="https://media-hosting.imagekit.io//5ed873d0253a4ebc/istockphoto-1190330112-612x612-removebg-preview.png?Expires=1833938769&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=XaBySmIJrdnqq5NA997mRZ7OMoO0h-rllWEGTnDmtEXzHintKaC8hr197VOxQuqy2C~h~wmD1DtQMAzwW9hhaGHx3izF1tZlssSbwVFaJfdKom3IfTmo1uKmiNgbYgfch4UHq2Ztq3sD3GLxhSjqr1n2YteqfPcu6vvvHVBIeeEMpaAyYXhfEC4dx2i8v~v1G7IsRgCUBoKF3Ld7WxrdB397uOK25o-qWnR6TR9AnBaLZdRHP1rMeQ478pYUrd3Wa4thDabNbA0-UZh7A1S4l8Ku6i0JKy0N8mM5NdqFepI7BUPXr9s~V074fm0xLTfz7ksr1bsprcAklhPXIsb~4w__" alt="">
+            </div>
+        </div>   
+    </div>
+    <!--Recipe of week -->
+
+   <div class="container my-5">
+        <div class="d-flex justify-content-between"><h3>Recipe of the week</h3>
+            <a routerLink="/recipes" class="text-dark">View all <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <p>Our most popular Recipe of the week</p>
+
+        <div class="row py-5">
+            @for(recipe of allRecipes ; track $index){
+                <div class="col-md-4 d-flex flex-column   align-items-center">
+                    <img class="pb-3" style="width: 300px;" [src]='recipe.image' alt="">
+               
+                    <div class="card-body pb-3">     <h6>{{recipe.name}}</h6></div>
+                </div>
+            }
+           
+
+           
+        </div>
+    
+   </div>
+    <!-- 50+recipes -->
+    <div class="container d-flex align-items-center mt-5" style="background-image:url(https://images.pexels.com/photos/6400006/pexels-photo-6400006.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);background-position: center;background-size: cover;min-height: 80vh;">
+        <div class="row  w-100 d-flex justify-content-center align-items-center " >
+            <div class="col-lg-6"></div>
+            <div class="col-lg-6 p-5 bg-light ">
+
+                <h3>50+ Recipes That Very <br> Quick And Fast</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo dolores consequatur cum.</p>
+            </div>
+        </div>
+    </div>
+<!-- app downlaod -->
+    <div class="container bg-nav mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img class="img-fluid" src="https://media-hosting.imagekit.io//8986d0fd41d740d6/ce5bc038a8a2d4f8f24465c8826182af1726501431__1_-removebg-preview.png?Expires=1833941789&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=I2v8blu8sUmQ9B9x02qjK0XEejnSZOmy47sEDScEWb5vvfhU7U9II2GAuW1re8iLTwhe-wxz6V3KqZVEQERpBu1dB8CZoOyFLIxHMppgTfGbOEwTrDy0ofger4Gp470dGpMoL6W3zAY9xqKA0B~EZJ3T2ScOv~erai7CTcoSYZ5AUtSAnLdBv4dHiL~j9ulckDc0OJCj04Pv9wymvfSsSTsb7cmnm-jiESr~iAGxmk3cydqKPF2VxV2gX1EXStpozbBtlLUj0F-qILtFb-wkiJAiBgkppKQi~v~Wl0AZP~5iw2ZCCe55QemaEP5ex8M6LGK1VVgylqf4bb0jyNQg9g__" alt="">
+            </div>
+            <div class="col-md-4 text-light d-flex flex-column justify-content-center align-items-center">
+
+                <h1>Downlaod App</h1>
+
+                <p>Dowload our app from Appstore or <br> Playstore for better experience</p>
+
+                <img  class="img-fluid"  src="https://media-hosting.imagekit.io//2bdf76536e664077/images__1_-removebg-preview.png?Expires=1833942347&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Aw~oU4ruT9PXw46x7gOgepfeO0D55GKx-oiUlZAyi9Jgw6QoGkqkJtgXMWiqd58FoI3A-GRiOqpXf2wK1OLbfT0OuBL6K389dRjqtRTDsIof~etCognzc3TaWqmwxCUUDGb3xgFpCPSQ1cS~093vGr6DfIIGV1A~NWYVprYOlZrqbnvB-DV3WjIrtzKRYoWrEBXqsvqtfqJJqstfdGlI4XLVpj63OorDlNFwrqtWdD2YZIbSSDMDr1f7rrPuCXBcDWu9ido0gq0HAYczvAbPrfxcBTlBgHgL-UlELjGO1kZENutKUIkqdFeKUhy3lD53CJc6Y8a-56IUgEBJ7ckdOw__" alt="">
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Testimonals -->
+
+    <h3 class="text-center mt-5 mb-4">Our Tesimonals</h3>
+
+<div class="marquee-container mb-5">
+      <marquee>
+            <div class="d-flex gap-4">
+                @for (item of allTestimonails; track $index) {
+                    <div style="width: 300px;" class=" bg-nav-light   border marquee-box    p-5" >
+                        <h5 class="color-light">{{item.name}}</h5>
+                        <h6>{{item.message}}
+                        </h6>
+                    </div>
+                }
+              
+               
+                
+            </div>
+      </marquee>
+</div>
+
+
+
+</div>
+
+<app-footer></app-footer>
+

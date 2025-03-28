@@ -1,0 +1,83 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 py-4">
+            <a routerLink="/recipes" class="text-dark"><i class="fa-solid text-dark fa-arrow-left"></i>All recipes</a>
+            <img class="my-4 w-100" [src]="recipe.image" alt="">
+            <div class="d-flex align-items-center justify-content-between">
+                <button class="btn bg-grn text-light" (click)="downlaodRecipe()">Download Recipe</button>
+                <button class="btn bg-nav text-light" (click)="saveRecipe()">Save Recipe</button>
+            </div>
+
+        </div>
+        <div class="col-md-6 py-4">
+            <h3>{{recipe.name}}</h3>
+
+            <div class="mt-4 d-flex justify-content-center gap-5 flex-wrap">
+                <p><strong>Cuisine</strong>: {{recipe.cuisine}}</p>
+                <p><strong>Servings</strong>: {{recipe.servings
+                    }}</p>
+                <p><strong>Mode of Cooking</strong>: {{recipe.difficulty}}</p>
+
+            </div>
+            <div class="mt-4 d-flex justify-content-center gap-5 flex-wrap">
+                <div class="div d-flex flex-column align-items-center justify-content-center">
+                    <i class="fa-regular fa-clock fs-1 mb-2"></i>
+                    <p class=" m-0 p-0">preperation Time</p>
+                    <p class="mt-2"><span class="text-success">{{recipe.prepTimeMinutes}}</span> Minutes</p>
+
+                </div>
+                <div class="div d-flex flex-column align-items-center justify-content-center">
+                    <i class="fa-solid fa-bowl-rice fs-1 mb-2"></i>
+                    <p class="m-0 p-0">Cooking Time</p>
+                    <p class="mt-2"><span class="text-success">{{recipe.cookTimeMinutes}}</span> Minutes</p>
+
+                </div>
+                <div class="div d-flex flex-column align-items-center justify-content-center">
+                    <i class="fa-solid fa-utensils fs-1 mb-2"></i>
+                    <p class="m-0 p-0">Calorie Per Servings</p>
+                    <p class="mt-2 text-success">{{recipe.caloriesPerServing}}</p>
+
+                </div>
+            </div>
+
+            <div class="my-3">
+                <h3>Ingredients Needed</h3>
+
+
+                <ol>
+                    @for (item of recipe.ingredients ; track $index) {
+                    <li>{{item}}</li>
+                    }
+                </ol>
+
+            </div>
+            <div class="my-3">
+                <h3>Cooking Instructions</h3>
+                <ol>
+                    @for (item of recipe.instructions ; track $index) {
+                    <li>{{item}}</li>
+                    }
+                </ol>
+
+            </div>
+        </div>
+
+    </div>
+    @if (allRelatedRecipes.length>0) {
+        <div class="mb-5">
+            <h3>Related recipes</h3>
+           <div class="row">
+                @for (recipe of allRelatedRecipes; track $index) {
+                    <div routerLink='/view/recipe/{{recipe._id}}' class="col-md-3 col-sm-4 align-items-center justify-content-center d-flex flex-column ">
+                        <img  class="pb-3 img-fluid" style="width: 250px;" [src]='recipe.image' alt="">
+        
+                        <h6>{{recipe.name}}</h6>
+                    </div>
+                }
+           </div>
+        </div>
+    }
+   
+</div>
+<app-footer></app-footer>

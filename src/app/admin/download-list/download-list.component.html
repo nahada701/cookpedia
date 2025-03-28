@@ -1,0 +1,40 @@
+<div class="row  w-100 ">
+    <div class="col-lg-4">
+        <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-lg-8">
+        <div class="container my-5">
+            <h2 class="text-grn ">Download List</h2>
+          </div>
+          <div class="mt-5 w-100 table-responsible">
+              <table class="table">
+                <thead>
+                    <tr >
+                        <th>Sl.no</th>
+                        <th>Recipe Id</th>
+                        <th>Recipe Name</th>
+                        <th>Cuisine</th>
+                        <th>Count</th>
+  
+  
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (item of allDownalodList; track $index) {
+                        <tr>
+                            <td>{{$index+1}}</td>
+                            <td>{{item.recipeId}}</td>
+                            <td>{{item.recipeName}}</td>
+                            <td>{{item.recipeCuisine}}</td>
+                            <td>{{item.count}}</td>
+                           
+  
+    
+    
+                        </tr>
+                    }
+                </tbody>
+              </table>
+            </div>
+    </div>
+</div>

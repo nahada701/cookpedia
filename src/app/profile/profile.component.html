@@ -1,0 +1,41 @@
+<app-header></app-header>
+<div class="container  my-5 px-0">
+
+  <div class="d-flex flex-column align-items-center">
+        <h2 class="text-dark mb-4">
+            My profile
+        </h2>
+    
+        <label>
+            <input type="file" (change)="getFile($event)" class="d-none">
+            <img style="width: 200px;height: 200px;" class="mb-5 border rounded-circle"  [src]='profilePic' alt="">
+        </label>
+        <br>
+        <button class="btn bg-grn text-light" (click)="updateProfile()">Update Profile</button>
+    
+  </div>
+    <h3 class="my-4 color-light">
+        Download Recipes
+    </h3>
+
+    @if (downloadList.length>0) {
+        <div class="row">
+            @for (recipe of downloadList; track $index) {
+                <div  class="col-md-2 col-sm-3 align-items-center justify-content-center d-flex flex-column ">
+                    
+                    <img routerLink='/view/recipe/{{recipe.recipeId}}'  class="pb-3 img-fluid" style="width: 250px;" [src]='recipe.recipeImage' alt="">
+    
+                    <h6>{{recipe.recipeName}}</h6>
+                </div>
+            }
+       </div>
+    }
+    @else{
+        <h4 class="text-center my-5 py-5 text-dark">
+            No recipe downloaded yet!!
+        </h4>
+    }
+ 
+
+</div>
+<app-footer></app-footer>

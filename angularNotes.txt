@@ -1,0 +1,11 @@
+modules:are used to group components ,not standalone component sthey are part of modules .we can lazy load modules in application
+
+lazy loading in angular : loading the content of webpages when require .it used to reduce initial loading
+-geeneratr module in angular with rotuing feature : ng g m module_name --routing
+
+-to create component under the module open terminal from there
+
+
+ng g c dashboard --no-standalone
+
+ng g g guads/auth --to protect routes
