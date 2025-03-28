@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ApiService {
-serverUrl:string="http://localhost:3000"
+serverUrl:string="https://cookpedia-backend-q5t9.onrender.com"
 
   constructor(private http:HttpClient) { }
   //to create reqHeader create an object in the class httpheader
