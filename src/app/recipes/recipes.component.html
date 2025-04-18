@@ -48,7 +48,7 @@
                 <div class="col-md-4 col-sm-6 align-items-center justify-content-center d-flex flex-column ">
                     <img (click)="viewRecipe(recipe._id)" class="pb-3 img-fluid" style="width: 250px;" [src]='recipe.image' alt="">
 
-                    <h6>{{recipe.name}}</h6>
+                    <h5>{{recipe.name}}</h5>
                 </div>
                 }
                 @if((allRecipes |search :searchKey).length==0){
